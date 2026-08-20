@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/torringt/public_html/
+    - source /home/torringt/nodevenv/repositories/site/20/bin/activate && npm install
+    - source /home/torringt/nodevenv/repositories/site/20/bin/activate && npm run build
+    - cp -R dist/. $DEPLOYPATH
